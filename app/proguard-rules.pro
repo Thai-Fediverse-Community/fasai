@@ -36,9 +36,9 @@
 # TUSKY SPECIFIC OPTIONS
 
 # keep members of our model classes, they are used in json de/serialization
--keepclassmembers class com.keylesspalace.tusky.entity.* { *; }
+-keepclassmembers class com.thaifediverse.fasai.entity.* { *; }
 
--keep public enum com.keylesspalace.tusky.entity.*$** {
+-keep public enum com.thaifediverse.fasai.entity.*$** {
     **[] $VALUES;
     public *;
 }

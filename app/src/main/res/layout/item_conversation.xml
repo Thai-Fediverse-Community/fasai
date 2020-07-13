@@ -203,7 +203,7 @@
         app:layout_constraintTop_toBottomOf="@id/button_toggle_content"
         tools:visibility="gone">
 
-        <com.keylesspalace.tusky.view.MediaPreviewImageView
+        <com.thaifediverse.fasai.view.MediaPreviewImageView
             android:id="@+id/status_media_preview_0"
             android:layout_width="0dp"
             android:layout_height="@dimen/status_media_preview_height"
@@ -213,7 +213,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
-        <com.keylesspalace.tusky.view.MediaPreviewImageView
+        <com.thaifediverse.fasai.view.MediaPreviewImageView
             android:id="@+id/status_media_preview_1"
             android:layout_width="0dp"
             android:layout_height="@dimen/status_media_preview_height"
@@ -224,7 +224,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
-        <com.keylesspalace.tusky.view.MediaPreviewImageView
+        <com.thaifediverse.fasai.view.MediaPreviewImageView
             android:id="@+id/status_media_preview_2"
             android:layout_width="0dp"
             android:layout_height="@dimen/status_media_preview_height"
@@ -235,7 +235,7 @@
             app:layout_constraintTop_toBottomOf="@+id/status_media_preview_0"
             tools:ignore="ContentDescription" />
 
-        <com.keylesspalace.tusky.view.MediaPreviewImageView
+        <com.thaifediverse.fasai.view.MediaPreviewImageView
             android:id="@+id/status_media_preview_3"
             android:layout_width="0dp"
             android:layout_height="@dimen/status_media_preview_height"

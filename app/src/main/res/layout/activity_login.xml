@@ -6,93 +6,71 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.keylesspalace.tusky.LoginActivity">
+    tools:context="com.thaifediverse.fasai.LoginActivity">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
+        android:layout_height="0dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.7"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvServer"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:text="@string/select_server_channel"
+            android:textColor="@color/textColorSecondary"
+            style="@style/TextSizeLargest"/>
 
-            <ImageView
-                android:layout_width="160dp"
-                android:layout_height="178dp"
-                android:layout_marginBottom="50dp"
-                android:contentDescription="@null"
-                android:id="@+id/loginLogo"
-                app:srcCompat="@drawable/elephant_friend" />
+        <LinearLayout
+            android:id="@+id/layoutRc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvServer"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_text_view"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
 
-            <LinearLayout
-                android:id="@+id/loginInputLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clipChildren="false"
-                android:orientation="vertical">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/domainTextInputLayout"
-                    style="@style/TuskyTextInput"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_domain"
-                    app:errorEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/domainEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textUri" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/loginButton"
-                    style="@style/TuskyButton"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:text="@string/action_login" />
-
-                <TextView
-                    android:id="@+id/whatsAnInstanceTextView"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
-                    android:text="@string/link_whats_an_instance"
-                    android:textAlignment="center" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/loginLoadingLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <ProgressBar
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:text="@string/login_connection"
-                    android:textAlignment="center" />
-            </LinearLayout>
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcServer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_server_channel" />
         </LinearLayout>
-    </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/loginLoadingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/login_connection"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

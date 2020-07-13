@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/serverLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@id/serverLogo">
+
+        <TextView
+            android:id="@+id/tvServerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/server_name"
+            android:textColor="@color/textColorSecondary"
+            style="@style/TextSizeLargest" />
+
+        <TextView
+            android:id="@+id/tvServerDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/server_des"
+            android:textColor="@color/textColorTertiary"
+            style="@style/TextSizeMedium"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/serverLogo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorBackground" />
+
+</RelativeLayout>
