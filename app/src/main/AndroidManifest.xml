@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.keylesspalace.tusky">
+    package="com.thaifediverse.fasai">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,15 +13,15 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name=".TuskyApplication"
+        android:name="com.thaifediverse.fasai.TuskyApplication"
         android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_logo_fasai"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/TuskyTheme"
         android:usesCleartextTraffic="false">
         <activity
-            android:name=".SplashActivity"
+            android:name="com.thaifediverse.fasai.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,10 +35,10 @@
 
         </activity>
         <activity
-            android:name=".SavedTootActivity"
+            android:name="com.thaifediverse.fasai.SavedTootActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"/>
         <activity
-            android:name=".LoginActivity"
+            android:name="com.thaifediverse.fasai.LoginActivity"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -52,7 +52,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.thaifediverse.fasai.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -103,30 +103,30 @@
 
         </activity>
         <activity
-            android:name=".components.compose.ComposeActivity"
+            android:name="com.thaifediverse.fasai.components.compose.ComposeActivity"
             android:theme="@style/TuskyDialogActivityTheme"
             android:windowSoftInputMode="stateVisible|adjustResize"/>
         <activity
-            android:name=".ViewThreadActivity"
+            android:name="com.thaifediverse.fasai.ViewThreadActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".ViewTagActivity" />
+        <activity android:name="com.thaifediverse.fasai.ViewTagActivity" />
         <activity
-            android:name=".ViewMediaActivity"
+            android:name="com.thaifediverse.fasai.ViewMediaActivity"
             android:theme="@style/TuskyBaseTheme" />
         <activity
-            android:name=".AccountActivity"
+            android:name="com.thaifediverse.fasai.AccountActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize" />
-        <activity android:name=".EditProfileActivity" />
-        <activity android:name=".PreferencesActivity" />
-        <activity android:name=".StatusListActivity" />
-        <activity android:name=".AccountListActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".TabPreferenceActivity" />
+        <activity android:name="com.thaifediverse.fasai.EditProfileActivity" />
+        <activity android:name="com.thaifediverse.fasai.PreferencesActivity" />
+        <activity android:name="com.thaifediverse.fasai.StatusListActivity" />
+        <activity android:name="com.thaifediverse.fasai.AccountListActivity" />
+        <activity android:name="com.thaifediverse.fasai.AboutActivity" />
+        <activity android:name="com.thaifediverse.fasai.TabPreferenceActivity" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
-            android:name=".components.search.SearchActivity"
+            android:name="com.thaifediverse.fasai.components.search.SearchActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -136,24 +136,24 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".ListsActivity" />
-        <activity android:name=".ModalTimelineActivity" />
-        <activity android:name=".LicenseActivity" />
-        <activity android:name=".FiltersActivity" />
+        <activity android:name="com.thaifediverse.fasai.ListsActivity" />
+        <activity android:name="com.thaifediverse.fasai.ModalTimelineActivity" />
+        <activity android:name="com.thaifediverse.fasai.LicenseActivity" />
+        <activity android:name="com.thaifediverse.fasai.FiltersActivity" />
         <activity
-            android:name=".components.report.ReportActivity"
+            android:name="com.thaifediverse.fasai.components.report.ReportActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-        <activity android:name=".components.instancemute.InstanceListActivity" />
-        <activity android:name=".components.scheduled.ScheduledTootActivity" />
+        <activity android:name="com.thaifediverse.fasai.components.instancemute.InstanceListActivity" />
+        <activity android:name="com.thaifediverse.fasai.components.scheduled.ScheduledTootActivity" />
 
-        <receiver android:name=".receiver.NotificationClearBroadcastReceiver" />
+        <receiver android:name="com.thaifediverse.fasai.receiver.NotificationClearBroadcastReceiver" />
         <receiver
-            android:name=".receiver.SendStatusBroadcastReceiver"
+            android:name="com.thaifediverse.fasai.receiver.SendStatusBroadcastReceiver"
             android:enabled="true"
             android:exported="false" />
 
         <service
-            android:name=".service.TuskyTileService"
+            android:name="com.thaifediverse.fasai.service.TuskyTileService"
             android:icon="@drawable/ic_tusky"
             android:label="Compose Toot"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
@@ -163,7 +163,7 @@
             </intent-filter>
         </service>
 
-        <service android:name=".service.SendTootService" />
+        <service android:name="com.thaifediverse.fasai.service.SendTootService" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

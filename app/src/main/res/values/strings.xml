@@ -564,4 +564,8 @@
     <string name="pref_title_show_cards_in_timelines">Show link previews in timelines</string>
     <string name="pref_title_confirm_reblogs">Show confirmation dialog before boosting</string>
 
+    <string name="select_server_channel">SELECT SERVER CHANNEL</string>
+    <string name="server_name">Server name.</string>
+    <string name="server_des">Server des.</string>
+    <string name="fasai">Fasai</string>
 </resources>

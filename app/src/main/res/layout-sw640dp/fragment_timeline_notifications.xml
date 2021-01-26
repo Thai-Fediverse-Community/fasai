@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:background="?attr/colorSurface"
             app:elevation="0dp"
-            app:layout_behavior="com.keylesspalace.tusky.util.AppBarLayoutNoEmptyScrollBehavior">
+            app:layout_behavior="com.thaifediverse.fasai.util.AppBarLayoutNoEmptyScrollBehavior">
 
             <LinearLayout
                 android:id="@+id/topButtonsLayout"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
 
-        <com.keylesspalace.tusky.view.BackgroundMessageView
+        <com.thaifediverse.fasai.view.BackgroundMessageView
             android:id="@+id/statusView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

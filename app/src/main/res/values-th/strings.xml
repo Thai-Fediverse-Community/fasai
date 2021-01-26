@@ -454,4 +454,9 @@
     <string name="post_lookup_error_format">การค้นหาโพสต์ %s เกิดข้อผิดผลาด</string>
     <string name="edit_poll">แก้ไข</string>
     <string name="poll_new_choice_hint">ตัวเลือกที่ %d</string>
+
+    <string name="select_server_channel">เลือกเซิร์ฟเวอร์</string>
+    <string name="server_name">ชื่อเซิร์ฟเวอร์</string>
+    <string name="server_des">ข้อมูลเซิร์ฟเวอร์</string>
+    <string name="fasai">ฟ้าใส</string>
 </resources>
